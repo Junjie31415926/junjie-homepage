@@ -6,9 +6,9 @@
 <title>Junjie Zhao | Computer Science & Photography</title>
 <meta name="description" content="Junjie Zhao — Computer Science, XR systems, HCI and photography. University of Rochester, Class of 2027.">
 <link rel="icon" href="assets/images/avatar.svg" type="image/svg+xml">
-<link rel="stylesheet" href="assets/css/variants.css">
+<link rel="stylesheet" href="assets/css/style.css">
 <script src="assets/js/main.js" defer></script>
-<script src="assets/js/variants.js" defer></script>
+<script src="assets/js/motion.js" defer></script>
 </head>
 <body class="editorial"><a class="skip-link" href="#main">Skip to content</a>
 <div class="frame">
@@ -18,7 +18,7 @@
   <div class="hero-copy"><div class="identity-line"><img class="avatar-small" src="assets/images/avatar.svg" alt="JZ initials; portrait placeholder" width="54" height="54"><p>Final-year CS undergraduate<br>University of Rochester · May 2027</p></div>
     <h1>Junjie<br><em>Zhao.</em></h1>
     <p class="hero-intro">I build wearable AR systems and work on human-centered AI at the University of Rochester.</p>
-    <p>With Prof. Yuhao Zhu in Horizon Lab, I lead an open wireless varifocal AR platform. In ROC-HCI, I work with Dr. Masum Hasan and Prof. Ehsan Hoque on conversational AI.</p>
+    <p>With Prof. Yuhao Zhu in Horizon Lab, I lead an open wireless varifocal AR platform. Previously, in ROC-HCI, I worked with Dr. Masum Hasan and Prof. Ehsan Hoque on conversational AI.</p>
     <p class="hero-meta">Preparing for MS / PhD applications.</p><div class="hero-links"><a href="#projects">Research projects ↗</a><a href="assets/Junjie-Zhao-CV.pdf" download>Download CV ↗</a><a href="mailto:jzhao58@u.rochester.edu">Email ↗</a></div>
   </div>
   <figure class="hero-photo"><img src="assets/images/photo-01.jpg" alt="Misty mountain ridges, reference image by Alessio Soggetti" width="1200" height="801"><figcaption>Reference image · <a href="https://unsplash.com/photos/blue-mountain-and-mist-KQXeabDx7dI" target="_blank" rel="noopener">Alessio Soggetti / Unsplash</a></figcaption></figure>
@@ -51,13 +51,13 @@
               <p class="project-footnote">InnovateCS Research Grant, 2026 · Lightning talk and poster at NY Architecture &amp; Systems Day, May 2026.</p>
             </article>
             <article class="project" id="project-hal">
-              <div class="project-top"><span class="small-label">ROC-HCI · SEP 2024 – PRESENT</span><span class="project-symbol" aria-hidden="true">[ AI ]</span></div>
+              <div class="project-top"><span class="small-label">ROC-HCI · SEP 2024 – MAY 2026</span><span class="project-symbol" aria-hidden="true">[ AI ]</span></div>
               <h3>HAL &amp; SOPHIE-LLM</h3>
               <p>Language-model alignment for human-like virtual patient dialogue and medical communication training.</p>
               <p class="project-role"><strong>Mentors:</strong> Dr. Masum Hasan and Prof. Ehsan Hoque.</p>
               <div class="tags"><span>LLM alignment</span><span>DPO</span><span>Human–AI interaction</span></div>
               <details><summary>My contribution</summary><p>I prototyped DPO training components and supported data cleaning, synthetic dialogue generation, benchmarking, and debugging. I also built and debugged a lightweight agent framework linking API-based and local LLMs for batch generation and structured output parsing.</p></details>
-              <a class="text-link" href="#pub-hal">Read the preprint <span aria-hidden="true">↗</span></a>
+              <a class="text-link" href="#pub-hal">Read the paper <span aria-hidden="true">↗</span></a>
             </article>
             <article class="project" id="project-devise">
               <div class="project-top"><span class="small-label">GOERGEN INSTITUTE · JAN – MAY 2025</span><span class="project-symbol" aria-hidden="true">[ CV ]</span></div>
@@ -66,49 +66,45 @@
               <p class="project-role"><strong>Mentor:</strong> Prof. Cantay Caliskan.</p>
               <div class="tags"><span>Mask2Former</span><span>MiDaS</span><span>Computer vision</span></div>
               <details><summary>My contribution</summary><p>I designed an end-to-end vegetation indexing pipeline integrating Mask2Former segmentation, MiDaS depth estimation, and HSV-based refinement to classify urban vegetation.</p></details>
-              <a class="text-link" href="#pub-devise">Read the working paper <span aria-hidden="true">↗</span></a>
+              <a class="text-link" href="https://ssrn.com/abstract=5371210">Read the working paper <span aria-hidden="true">↗</span></a>
             </article>
           </div>
         </section>        <section id="publications" aria-labelledby="publications-heading">
           <div class="section-heading"><h2 id="publications-heading">Selected Publications</h2><span class="section-number" aria-hidden="true">03</span></div>
-          <p class="section-caption">Preprints &amp; working papers</p>
+          <p class="section-caption">Selected conference papers</p>
           <div class="publication-list">
             <article class="publication" id="pub-hal">
-              <div class="pub-meta"><span class="venue">ARXIV</span><span>2026</span></div>
+              <div class="pub-meta"><span class="venue">EMNLP</span><span>2026</span></div>
               <div class="pub-content">
                 <h3><a href="https://arxiv.org/abs/2601.02813" target="_blank" rel="noopener noreferrer">HAL: Inducing Human-likeness in LLMs with Alignment</a></h3>
                 <p class="authors">Masum Hasan, <strong>Junjie Zhao</strong>, Ehsan Hoque</p>
-                <p class="pub-summary">Aligning conversational behavior using a transparent reward built from interpretable traits. arXiv preprint.</p>
+                <p class="pub-summary">Aligning conversational behavior using a transparent reward built from interpretable traits. EMNLP 2026 Main Conference Paper.</p>
                 <div class="paper-details">
                   <a href="https://arxiv.org/abs/2601.02813" target="_blank" rel="noopener noreferrer">Paper ↗</a>
-                  <details><summary>BibTeX</summary><pre><code>@misc{hasan2026hal,
+                  <details><summary>BibTeX</summary><pre><code>@inproceedings{hasan2026hal,
   title = {HAL: Inducing Human-likeness in LLMs with Alignment},
   author = {Hasan, Masum and Zhao, Junjie and Hoque, Ehsan},
   year = {2026},
-  eprint = {2601.02813},
-  archivePrefix = {arXiv},
-  primaryClass = {cs.AI},
+  booktitle = {EMNLP 2026 (Main Conference)},
   url = {https://arxiv.org/abs/2601.02813}
 }</code></pre><button class="copy-citation" type="button">Copy BibTeX</button></details>
                 </div>
               </div>
             </article>
-            <article class="publication" id="pub-devise">
-              <div class="pub-meta"><span class="venue">SSRN</span><span>2025</span></div>
+            <article class="publication" id="pub-controlgs">
+              <div class="pub-meta"><span class="venue">SIGGRAPH ASIA</span><span>2026</span></div>
               <div class="pub-content">
-                <h3><a href="https://ssrn.com/abstract=5371210" target="_blank" rel="noopener noreferrer">DEVISE: Depth-Aware Vegetation Indexing System</a></h3>
-                <p class="authors">Cantay Caliskan, Zhizhuang Chen, Linglan Yang, Mingzhen Zhang, <strong>Junjie Zhao</strong></p>
-                <p class="pub-summary">Combining image segmentation and depth to measure street-level vegetation. SSRN working paper; authors listed alphabetically.</p>
+                <h3>ControlGS: Conditioning Neural Gaussians for Downstream-Processing–Aware XR Rendering</h3>
+                <p class="authors">Weikai Lin, <strong>Junjie Zhao</strong>, Sushant Kondguli, Carll Marshall, Yuhao Zhu</p>
+                <p class="pub-summary">SIGGRAPH Asia 2026 Conference Paper.</p>
                 <div class="paper-details">
-                  <a href="https://ssrn.com/abstract=5371210" target="_blank" rel="noopener noreferrer">Paper ↗</a>
-                  <details><summary>BibTeX</summary><pre><code>@misc{caliskan2025devise,
-  title = {DEVISE: Depth-Aware Vegetation Indexing System},
-  author = {Caliskan, Cantay and Chen, Zhizhuang and
-            Yang, Linglan and Zhang, Mingzhen and Zhao, Junjie},
-  year = {2025},
-  note = {SSRN Working Paper},
-  doi = {10.2139/ssrn.5371210},
-  url = {https://ssrn.com/abstract=5371210}
+                  <details><summary>BibTeX</summary><pre><code>@inproceedings{lin2026controlgs,
+  title = {ControlGS: Conditioning Neural Gaussians for
+           Downstream-Processing-Aware XR Rendering},
+  author = {Lin, Weikai and Zhao, Junjie and Kondguli, Sushant
+            and Marshall, Carll and Zhu, Yuhao},
+  year = {2026},
+  booktitle = {SIGGRAPH Asia 2026}
 }</code></pre><button class="copy-citation" type="button">Copy BibTeX</button></details>
                 </div>
               </div>
@@ -146,12 +142,12 @@
               <figcaption><span class="photo-title">03 / Between forms</span><span class="photo-credit">Photo: <a href="https://unsplash.com/photos/concrete-wall-with-diagonal-light-and-shadow-patterns-mSUf5ksmZIg" target="_blank" rel="noopener noreferrer">Spacebound</a> / Unsplash</span></figcaption>
             </figure>
           </div>
-          <p class="gallery-note">Reference photography used under the Unsplash License. <a href="PHOTO-CREDITS.md">Sources &amp; credits</a>.</p>
+          <p class="gallery-note">Reference photography used under the <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer">Unsplash License</a>.</p>
         </section>        <section id="contact" aria-labelledby="contact-heading">
           <div class="section-heading"><h2 id="contact-heading">Let’s connect.</h2><span class="section-number" aria-hidden="true">06</span></div>
           <p>I’m preparing for MS and PhD applications and welcome conversations about XR systems, HCI, and human-centered AI. I’m also always happy to talk photography.</p>
           <div class="contact-actions"><a class="email-link" href="mailto:jzhao58@u.rochester.edu">jzhao58@u.rochester.edu</a><button id="copy-email" type="button" data-email="jzhao58@u.rochester.edu">Copy email</button></div>
           <p class="contact-address">Department of Computer Science<br>University of Rochester · Rochester, NY</p>
-        </section></main><div class="variant-tools"><button class="motion-switch" id="motion-toggle" type="button" aria-pressed="false" hidden>Pause motion</button></div><footer class="page-footer"><p>© 2026 Junjie Zhao · Updated September 2026</p><a href="#about">Back to top ↑</a></footer></div><div id="copy-status" class="sr-only" role="status" aria-live="polite"></div>
+        </section></main><div class="page-tools"><button class="motion-switch" id="motion-toggle" type="button" aria-pressed="false" hidden>Pause motion</button></div><footer class="page-footer"><p>© 2026 Junjie Zhao · Updated September 2026</p><a href="#about">Back to top ↑</a></footer></div><div id="copy-status" class="sr-only" role="status" aria-live="polite"></div>
 </body>
 </html>
