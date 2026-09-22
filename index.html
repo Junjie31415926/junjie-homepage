@@ -1,17 +1,34 @@
 <!doctype html><html lang="en"><head><script>
-// Fresh homepage visits and reloads start at About; keep section links and history navigation.
+// Reloads start at About. Shared section links still work on first arrival.
 (() => {
   const navigation = performance.getEntriesByType('navigation')[0];
-  if (location.hash || (navigation && navigation.type === 'back_forward')) return;
+  const isReload = navigation && navigation.type === 'reload';
+  const isHistoryVisit = navigation && navigation.type === 'back_forward';
+  if (isHistoryVisit || (!isReload && location.hash)) return;
+
   if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
-  window.addEventListener('pageshow', (event) => {
-    if (!event.persisted && !location.hash) {
+  if (isReload && location.hash) {
+    history.replaceState(history.state, '', location.pathname + location.search);
+  }
+
+  let userInteracted = false;
+  for (const event of ['pointerdown', 'wheel', 'touchstart', 'keydown']) {
+    window.addEventListener(event, () => { userInteracted = true; }, { once: true, passive: true });
+  }
+  function showAbout() {
+    if (!userInteracted && !location.hash) {
       window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     }
-    if ('scrollRestoration' in history) history.scrollRestoration = 'auto';
+  }
+  document.addEventListener('DOMContentLoaded', showAbout, { once: true });
+  window.addEventListener('pageshow', (event) => {
+    if (event.persisted) return;
+    showAbout();
+    // Run after the browser's initial history/anchor positioning, without a timed scroll loop.
+    window.requestAnimationFrame(() => window.requestAnimationFrame(showAbout));
   }, { once: true });
 })();
-</script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Junjie Zhao | Computer Science</title><meta name="description" content="Junjie Zhao, Computer Science undergraduate at the University of Rochester. Research in XR systems, human–AI interaction, and computer vision."><link rel="icon" href="assets/images/avatar.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/css/style.css?v=cv-pdf"><script src="assets/js/sidebar.js" defer></script></head><body><a class="skip-link" href="#main">Skip to content</a><div class="page"><main id="main" class="scholar-layout">
+</script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Junjie Zhao | Computer Science</title><meta name="description" content="Junjie Zhao, Computer Science undergraduate at the University of Rochester. Research in XR systems, human–AI interaction, and computer vision."><link rel="icon" href="assets/images/avatar.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/css/style.css?v=responsive-fix"><script src="assets/js/sidebar.js" defer></script></head><body><a class="skip-link" href="#main">Skip to content</a><div class="page"><main id="main" class="scholar-layout">
 <aside class="identity" aria-label="Profile">
  <a class="identity-image" href="#about"><img src="assets/images/avatar.svg" alt="JZ monogram; replace with a personal portrait" width="168" height="191"></a>
  <h1>Junjie Zhao</h1><p class="identity-role">Computer Science Undergraduate</p>

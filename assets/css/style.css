@@ -43,7 +43,7 @@ body.photo-page{background:#fff}.photo-page .page{max-width:1000px;padding:38px 
 .experience-institution{font-size:14px;color:var(--muted);margin:0 0 22px}
 #teaching-experience .education-row{margin-bottom:20px}
 #teaching-experience .education-row:last-child,#internships .education-row:last-child{margin-bottom:0}
-.rail-navigation{gap:1px}.rail-navigation a{padding-top:3px;padding-bottom:3px}
+.rail-navigation a{padding-top:3px;padding-bottom:3px}
 
 .contact-profiles{display:flex;flex-wrap:wrap;gap:12px 24px;margin:0 0 18px;font-size:14px}
 
@@ -56,3 +56,22 @@ body.photo-page{background:#fff}.photo-page .page{max-width:1000px;padding:38px 
 }
 
 
+/* Keep mobile navigation spaced, wrapping, and usable in narrow panels. */
+@media(max-width:820px){
+ .rail-navigation{display:flex;flex-direction:row;flex-wrap:wrap;gap:8px 20px;min-width:0}
+ .rail-navigation a{display:inline-flex;align-items:center;min-height:40px;padding:4px 0;white-space:nowrap}
+ .identity-contact{display:flex;flex-wrap:wrap;gap:8px 24px}
+ .identity-contact a{display:inline-flex;align-items:center;min-height:36px}
+}
+@media(max-width:440px){
+ .identity-image{float:none;width:88px;margin:0 0 16px}
+ .identity-image img{width:88px;height:100px}
+ .identity h1{font-size:30px;overflow-wrap:anywhere}
+ .identity-role{max-width:none}
+ .rail-navigation{gap:6px 18px}
+ .section-heading h2{min-width:0;overflow-wrap:anywhere}
+ .pub-content,.education-row>div,.photo-top{min-width:0;overflow-wrap:anywhere}
+ .photo-top{flex-direction:column;align-items:flex-start;gap:16px}
+ .photo-top nav{gap:8px 18px}
+ .page>footer{flex-wrap:wrap}
+}
