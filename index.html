@@ -1,4 +1,17 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Junjie Zhao | Computer Science</title><meta name="description" content="Junjie Zhao, Computer Science undergraduate at the University of Rochester. Research in XR systems, human–AI interaction, and computer vision."><link rel="icon" href="assets/images/avatar.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/css/style.css?v=cv-pending"><script src="assets/js/sidebar.js" defer></script></head><body><a class="skip-link" href="#main">Skip to content</a><div class="page"><main id="main" class="scholar-layout">
+<!doctype html><html lang="en"><head><script>
+// Fresh homepage visits and reloads start at About; keep section links and history navigation.
+(() => {
+  const navigation = performance.getEntriesByType('navigation')[0];
+  if (location.hash || (navigation && navigation.type === 'back_forward')) return;
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  window.addEventListener('pageshow', (event) => {
+    if (!event.persisted && !location.hash) {
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    }
+    if ('scrollRestoration' in history) history.scrollRestoration = 'auto';
+  }, { once: true });
+})();
+</script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Junjie Zhao | Computer Science</title><meta name="description" content="Junjie Zhao, Computer Science undergraduate at the University of Rochester. Research in XR systems, human–AI interaction, and computer vision."><link rel="icon" href="assets/images/avatar.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/css/style.css?v=cv-pdf"><script src="assets/js/sidebar.js" defer></script></head><body><a class="skip-link" href="#main">Skip to content</a><div class="page"><main id="main" class="scholar-layout">
 <aside class="identity" aria-label="Profile">
  <a class="identity-image" href="#about"><img src="assets/images/avatar.svg" alt="JZ monogram; replace with a personal portrait" width="168" height="191"></a>
  <h1>Junjie Zhao</h1><p class="identity-role">Computer Science Undergraduate</p>
@@ -9,7 +22,7 @@
    <a href="#research-experience">Research</a>
    <a href="#education">Background</a>
    <a href="photography.html">Photography ↗</a>
-   <span class="cv-placeholder" aria-disabled="true">CV</span>
+   <a href="assets/Junjie-Zhao-CV.pdf" target="_blank" rel="noopener noreferrer">CV ↗</a>
  </nav>
  <div class="identity-contact"><a href="mailto:jzhao58@u.rochester.edu">Email</a><a href="https://scholar.google.com/citations?user=uCZuYrAAAAAJ" aria-label="Google Scholar profile">Scholar ↗</a><a href="https://github.com/Junjie31415926">GitHub ↗</a><a href="https://www.linkedin.com/in/junjie-zhao-53808228b/">LinkedIn ↗</a></div>
 </aside><div class="scholar-content"><div class="intro" id="about"><h2>About me</h2><p>I’m a final-year Computer Science undergraduate at the <strong>University of Rochester</strong>, where I work on XR systems, human–AI interaction, and computer vision.</p><p>At Horizon Lab, I lead an open wireless varifocal AR platform with Prof. Yuhao Zhu. Previously, I worked with Dr. Masum Hasan and Prof. Ehsan Hoque in the ROC-HCI LAB on human-like conversational AI.</p><p class="application">Seeking MS / PhD opportunities · Graduating May 2027</p></div><section id="research" aria-labelledby="research-heading">
@@ -24,8 +37,6 @@
           <ul class="news-list">
             <li><time datetime="2026-08">Aug 2026</time><p>Started as an Open Lab Support Teaching Assistant in the Computer Science department.</p></li>
             <li><time datetime="2026-05">May 2026</time><p>Presented <a href="#project-ar">End-to-End Wireless Varifocal AR Prototype</a> at NY Architecture &amp; Systems Day, Princeton University.</p></li>
-            <li><time datetime="2026">2026</time><p>Received an Honorable Mention for the <strong>CRA Outstanding Undergraduate Researcher Award</strong>.</p></li>
-            <li><time datetime="2026-01">Jan 2026</time><p><a href="https://arxiv.org/abs/2601.02813" target="_blank" rel="noopener noreferrer">HAL: Inducing Human-likeness in LLMs with Alignment</a> is available on arXiv.</p></li>
           </ul>
         </section><section id="publications" aria-labelledby="publications-heading">
           <div class="section-heading"><h2 id="publications-heading">Publications</h2></div>
@@ -36,7 +47,7 @@
               <div class="pub-content">
                 <h3><a href="https://arxiv.org/abs/2601.02813" target="_blank" rel="noopener noreferrer">HAL: Inducing Human-likeness in LLMs with Alignment</a></h3>
                 <p class="authors">Masum Hasan, <strong>Junjie Zhao</strong>, Ehsan Hoque</p>
-                <p class="pub-summary">EMNLP 2026 Main Conference Paper.</p>
+                <p class="pub-summary">EMNLP 2026 Main Conference Paper</p>
                 <div class="paper-details">
                   <a href="https://arxiv.org/abs/2601.02813" target="_blank" rel="noopener noreferrer">Paper ↗</a><a href="https://github.com/ROC-HCI/hal">Code ↗</a>
                   
@@ -48,7 +59,7 @@
               <div class="pub-content">
                 <h3>ControlGS: Conditioning Neural Gaussians for Downstream-Processing–Aware XR Rendering</h3>
                 <p class="authors">Weikai Lin, <strong>Junjie Zhao</strong>, Sushant Kondguli, Carll Marshall, Yuhao Zhu</p>
-                <p class="pub-summary">SIGGRAPH Asia 2026 Conference Paper.</p>
+                <p class="pub-summary">SIGGRAPH Asia 2026 Conference Paper</p>
                 
               </div>
             </article>
@@ -60,22 +71,22 @@
               <div class="project-top"><span class="small-label">HORIZON LAB · FEB 2025 – PRESENT</span></div>
               <h3>Open AR Platform</h3>
               <p>A wearable research platform connecting sensing, server-side localization and rendering, and a varifocal display.</p>
-              <p class="project-role"><strong>Mentor:</strong> Prof. Yuhao Zhu.</p>
-              <p class="project-role"><strong>My role:</strong> Project lead and undergraduate research assistant.</p>
+              <p class="project-role"><strong>Mentor:</strong> Prof. Yuhao Zhu</p>
+              <p class="project-role"><strong>My role:</strong> Lead the optical, hardware, and software co-design and development of the Open AR Platform</p>
             </article>
             <article class="project" id="project-hal">
               <div class="project-top"><span class="small-label">ROC-HCI LAB · SEP 2024 – MAY 2026</span></div>
               <h3>SOPHIE-LLM</h3>
               <p>Language-model alignment for human-like virtual patient dialogue and medical communication training.</p>
-              <p class="project-role"><strong>Mentors:</strong> Dr. Masum Hasan and Prof. Ehsan Hoque.</p>
-              <p class="project-role"><strong>My role:</strong> Prototyped DPO training components and supported dialogue data preparation and evaluation.</p>
+              <p class="project-role"><strong>Mentors:</strong> Dr. Masum Hasan and Prof. Ehsan Hoque</p>
+              <p class="project-role"><strong>My role:</strong> Assisted with DPO training and dialogue data preparation for SOPHIE-LLM</p>
             </article>
             <article class="project" id="project-devise">
               <div class="project-top"><span class="small-label">GIDS-AI · JAN – MAY 2025</span></div>
               <h3>Street-View Green Index</h3>
               <p>Computer vision–based green index analysis of street-view images.</p>
-              <p class="project-role"><strong>Mentor:</strong> Prof. Cantay Caliskan.</p>
-              <p class="project-role"><strong>My role:</strong> Designed and built the street-view green index analysis pipeline.</p>
+              <p class="project-role"><strong>Mentor:</strong> Prof. Cantay Caliskan</p>
+              <p class="project-role"><strong>My role:</strong> Designed and built the street-view green index analysis pipeline</p>
             </article>
           </div>
         </section><section id="education" aria-labelledby="education-heading">
@@ -103,8 +114,5 @@
           <div class="education-row"><div><h3>Institute of Automation, Chinese Academy of Sciences</h3><p>Artificial Intelligence Intern · Beijing, China</p><p class="muted">Deployed YOLOv5 on Jetson Nano and integrated camera perception with real-time smart-car control.</p></div><span class="education-year">May – Aug 2024</span></div>
         </section><section id="contact" aria-labelledby="contact-heading">
           <div class="section-heading"><h2 id="contact-heading">Contact</h2></div>
-          <p>I’m preparing for MS and PhD applications and welcome conversations about XR systems, HCI, and human-centered AI. I’m also always happy to talk photography.</p>
           <div class="contact-actions"><a class="email-link" href="mailto:jzhao58@u.rochester.edu">jzhao58@u.rochester.edu</a></div>
-          <div class="contact-profiles"><a href="https://scholar.google.com/citations?user=uCZuYrAAAAAJ">Google Scholar ↗</a><a href="https://github.com/Junjie31415926">GitHub ↗</a><a href="https://www.linkedin.com/in/junjie-zhao-53808228b/">LinkedIn ↗</a></div>
-          <p class="contact-address">Department of Computer Science<br>University of Rochester · Rochester, NY</p>
         </section></div></main><footer><span>© 2026 Junjie Zhao</span><a href="#about">Back to top ↑</a></footer></div></body></html>

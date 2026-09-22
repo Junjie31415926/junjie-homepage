@@ -55,6 +55,4 @@ body.photo-page{background:#fff}.photo-page .page{max-width:1000px;padding:38px 
  .publication .pub-meta,.publication .pub-content{grid-column:1}
 }
 
-/* CV remains inactive until the external document link is supplied. */
-.cv-placeholder{color:var(--muted);opacity:.65}
-.rail-navigation .cv-placeholder{padding:3px 0}
+
